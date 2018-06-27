@@ -9,25 +9,30 @@ var defaultQuestions = [
 {
     question: "Where are the three smallest bones in the human body?", 
     answers: ["middle ear", "nose", "toes", "eyes"],
-    correctAnswer: answers[0]
+    correctAnswer: 0
 },
 {
     question: "What is the most abundant element in the Universe?",
     answers: ["Helium", "Oxygen", "Lithium", "Hydrogen"],
-    correctAnswer: answers[3]
+    correctAnswer: 3
 },
 {
     question: "Approximately how long does it take for light to travel from the Sun's surface to the Earth?",
     answers: ["8 days", "8 seconds", "8 minutes", "8 hours"],
-    correctAnswer: answers[2]
+    correctAnswer: 2
 },
 {
     question: "What is 10/2?",
     answers: ["5", "2", "8", "9"],
-    correctAnswer: answers[0]
+    correctAnswer: 0
 },
 {
     question: "Which planet has the most moons?",
     answers: ["Saturn", "Mars", "Jupiter", "Uranus"],
-    correctAnswer: answers[2]
+    correctAnswer: 2
 }];
+var currentQuestion = 0;
+function populateQuestion() {
+    $("quizStatus").html("Question" + currentQuestion + " out of" + defaultQuestions.length);
+
+}
