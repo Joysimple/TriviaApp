@@ -47,7 +47,7 @@ function nextQuestion() {
         rightAnswers += 1;
     }
     
-    if (currentQuestion < defaultQuestions.length) {
+    if (currentQuestion < defaultQuestions.length - 1) {
         currentQuestion += 1;
         populateQuestion();
     }
