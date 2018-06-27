@@ -43,10 +43,11 @@ function populateQuestion() {
 }
 function nextQuestion() {
     var checkedValue =  $("input[name=choices]:checked").val();
-    console.log(checkedValue);
     if (checkedValue == defaultQuestions[currentQuestion].correctAnswer) {
         rightAnswers += 1;
     }
+    currentQuestion += 1;
+    populateQuestion();
 }
 $("#submit").click(nextQuestion);   
 populateQuestion();
