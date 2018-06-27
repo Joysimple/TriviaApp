@@ -33,6 +33,15 @@ var defaultQuestions = [
 }];
 var currentQuestion = 0;
 function populateQuestion() {
-    $("quizStatus").html("Question" + currentQuestion + " out of" + defaultQuestions.length);
+    $("#quizStatus").html("Question " + currentQuestion + " out of " + defaultQuestions.length);
+    $("#question").html(defaultQuestions[currentQuestion].question);
+    $("#choiceA").html(defaultQuestions[currentQuestion].answers[0]);
+    $("#choiceB").html(defaultQuestions[currentQuestion].answers[1]);
+    $("#choiceC").html(defaultQuestions[currentQuestion].answers[2]);
+    $("#choiceD").html(defaultQuestions[currentQuestion].answers[3]);
+}
+function nextQuestion() {
 
 }
+("#submit").click(nextQuestion);   
+populateQuestion();
