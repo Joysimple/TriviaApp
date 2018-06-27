@@ -41,7 +41,11 @@ function populateQuestion() {
     $("#choiceD").html(defaultQuestions[currentQuestion].answers[3]);
 }
 function nextQuestion() {
-
+    var checkedValue =  $("input[name=choices]:checked").val();
+    console.log(checkedValue);
+    if (checkedValue == defaultQuestions[currentQuestion].correctAnswer) {
+        
+    }
 }
-("#submit").click(nextQuestion);   
+$("#submit").click(nextQuestion);   
 populateQuestion();
