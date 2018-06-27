@@ -46,8 +46,14 @@ function nextQuestion() {
     if (checkedValue == defaultQuestions[currentQuestion].correctAnswer) {
         rightAnswers += 1;
     }
-    currentQuestion += 1;
-    populateQuestion();
+    
+    if (currentQuestion < defaultQuestions.length) {
+        currentQuestion += 1;
+        populateQuestion();
+    }
+    else {
+        
+    }
 }
 $("#submit").click(nextQuestion);   
 populateQuestion();
