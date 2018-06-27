@@ -32,6 +32,7 @@ var defaultQuestions = [
     correctAnswer: 2
 }];
 var currentQuestion = 0;
+var rightAnswers = 0;
 function populateQuestion() {
     $("#quizStatus").html("Question " + currentQuestion + " out of " + defaultQuestions.length);
     $("#question").html(defaultQuestions[currentQuestion].question);
@@ -44,7 +45,7 @@ function nextQuestion() {
     var checkedValue =  $("input[name=choices]:checked").val();
     console.log(checkedValue);
     if (checkedValue == defaultQuestions[currentQuestion].correctAnswer) {
-        
+        rightAnswers += 1;
     }
 }
 $("#submit").click(nextQuestion);   
