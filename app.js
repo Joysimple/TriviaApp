@@ -53,6 +53,7 @@ function nextQuestion() {
     }
     else {
         
+        $("#quizStatus").html("Your score " + rightAnswers + " out of " + defaultQuestions.length);
     }
 }
 $("#submit").click(nextQuestion);   
